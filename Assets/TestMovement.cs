@@ -3,6 +3,7 @@ using UnityEngine;
 public class TestMovement : MonoBehaviour
 {
 	[SerializeField] Rigidbody body;
+	Vector3 vector;
 
 	void Reset()
 	{
@@ -11,7 +12,12 @@ public class TestMovement : MonoBehaviour
 
 	void Update()
 	{
-		Vector3 vector = new Vector3(Input.GetAxis("Vertical"), 0, -Input.GetAxis("Horizontal"));
+		vector.x = Input.GetAxis("Vertical");
+		vector.y = -Input.GetAxis("Horizontal");
+	}
+
+	void FixedUpdate()
+	{
 		body.AddForce(vector * 10);
 	}
 }
