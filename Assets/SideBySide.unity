@@ -1191,6 +1191,7 @@ MonoBehaviour:
   line: {fileID: 974868985}
   target: {fileID: 548392240}
   graphCamera: {fileID: 1331157527}
+  filename: on.csv
   width: 2
   yScale: 0.2
   steps: 100
@@ -1367,6 +1368,7 @@ MonoBehaviour:
   line: {fileID: 1011560306}
   target: {fileID: 963194228}
   graphCamera: {fileID: 1962687012}
+  filename: off.csv
   width: 2
   yScale: 0.2
   steps: 100
@@ -1712,6 +1714,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: Toggle
+  interpolation: {fileID: 0}
+  ball: {fileID: 0}
 --- !u!1 &1331157525
 GameObject:
   m_ObjectHideFlags: 0
