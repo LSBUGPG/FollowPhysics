@@ -2,11 +2,21 @@
 
 This project illustrates an issue with a camera following a Unity physics object.
 
+## The issue
+
 Digital Foundry highlighted this issue in a recent video:
 
 [![A link to the Digital Foundry video](DF.png)](https://youtube.com/watch?v=TQIBknDAj4g&t=3526)
 
-To help show what's going on, this project contains two scenes. You should build and run these scenes rather than previewing them in the editor, as editor playback has its own frame pacing issues.
+The problem is that, by default, the Unity physics system updates at a fixed rate of 50 times per second, whereas the displayed frames usually update at a rate of approximately 60 times per second. (The actual update rate might synch with your monitor settings, or just go as fast as it can.)
+
+When the displayed rate and the physics rate are different, the number of physics updates between displayed frames will vary, and this will make the scene visibly judder in play.
+
+The following graph shows the apparent displacement of an object displayed at 60 frames per second but updating its position at 50 frames per second.
+
+![A graph showing the apparent displacement of a steadily accelerating object](Displacement.png)
+
+To help show what's going on, this project contains two scenes. You should build and run these scenes rather than previewing them in the editor, as editor playback has its own frame rate issues.
 
 ## Side By Side
 
@@ -22,7 +32,7 @@ In this scene, the ball has a `Rigidbody` component attached. On the left, the `
 
 On the right, the parameter is set to `Interpolate` which fixes the issue.
 
-![A screenshot of the interpolation setting set turned on](Interpolate.png)
+![A screenshot of the interpolation setting turned on](Interpolate.png)
 
 Press the `TAB` key to switch to the next scene.
 
