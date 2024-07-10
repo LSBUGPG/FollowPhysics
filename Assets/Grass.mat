@@ -78,7 +78,7 @@ Material:
     - _BUILTIN_QueueOffset: 0
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _DepthScale: 0.0138
+    - _DepthScale: 0.02
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
