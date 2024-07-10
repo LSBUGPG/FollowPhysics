@@ -13,7 +13,7 @@ public class TestMovement : MonoBehaviour
 	void Update()
 	{
 		vector.x = Input.GetAxis("Vertical");
-		vector.y = -Input.GetAxis("Horizontal");
+		vector.z = -Input.GetAxis("Horizontal");
 	}
 
 	void FixedUpdate()
