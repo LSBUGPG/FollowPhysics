@@ -49,6 +49,7 @@ public class Graph : MonoBehaviour
 		velocity = 0;
 		acceleration = 0;
 		start = Time.time;
+		startPosition = position;
 	}
 
 	void Update()
@@ -59,11 +60,6 @@ public class Graph : MonoBehaviour
 		acceleration = (v - velocity) / dt;
 		velocity = v;
 		position = target.position;
-
-		if (current == 0)
-		{
-			startPosition = position;
-		}
 
 		if (t > start + 1f && current < steps)
 		{
